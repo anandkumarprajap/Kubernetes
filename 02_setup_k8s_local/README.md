@@ -767,6 +767,42 @@ Whenever a Pod is created, deleted, or changes status, the output updates automa
 .............................................................................................................
 
 ![Image a](a.png)
+
+```txt
+
+Kubernetes Cluster
+│
+├── Control Plane
+│   ├── API Server
+│   ├── etcd
+│   ├── Scheduler
+│   ├── Controller Manager
+│   └── Cloud Controller Manager
+│
+└── Worker Nodes
+    │
+    ├── Worker Node 1
+    │   ├── kubelet
+    │   ├── kube-proxy
+    │   └── Pods
+    │       ├── Pod A
+    │       │   ├── Container 1
+    │       │   └── Container 2
+    │       │
+    │       └── Pod B
+    │           └── Container 1
+    │
+    └── Worker Node 2
+        ├── kubelet
+        ├── kube-proxy
+        └── Pods
+            ├── Pod C
+            │   └── Container 1
+            │
+            └── Pod D
+                └── Container 1
+
+```
 # ☸️ Kubernetes Cluster Architecture (Beginner to Advanced Guide)
 
 > **Kubernetes (K8s)** is an open-source **Container Orchestration Platform** that automates the deployment, scaling, networking, and management of containerized applications.
